@@ -1,6 +1,7 @@
 import "./styles.css";
 import { useState } from "react";
 let iv;
+
 export default function App() {
   const [o, n] = useState({ c: 0, times: "even" });
   const [vs, us] = useState(0);
@@ -10,6 +11,10 @@ export default function App() {
   }
   function b() {
     us(iv);
+  }
+  function re() {
+    n({ ...o, c: 0, times: "even" });
+    console.log(o);
   }
 
   function r() {
@@ -34,6 +39,7 @@ export default function App() {
       <h1>{o.times}</h1>
       <input type="text" onChange={i} />
       <button onClick={b}> set limit</button>
+      <button onClick={re}>reset</button>
     </div>
   );
 }
